@@ -34,9 +34,10 @@ const SectionFour = () => {
             </section>
           </section>
           <p className="max-w-[900px] text-[1.5em]">
-            "It's like having a personal learning assistant. The recommendation
-            are spot on, and the progress tracking keeps me motivated. The
-            dashboard makes my online courses feels like a breeze"
+            &quot;It&apos;s like having a personal learning assistant. The
+            recommendation are spot on, and the progress tracking keeps me
+            motivated. The dashboard makes my online courses feels like a
+            breeze&quot;
           </p>
         </section>
       </section>

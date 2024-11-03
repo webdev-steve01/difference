@@ -4,7 +4,7 @@ import plus from "@/public/add-01.svg";
 import Image from "next/image";
 
 type faqProps = {
-  title: String;
+  title: string;
 };
 const FaqChild = (props: faqProps) => {
   // const [open, setOpen] = useState("false");

@@ -23,8 +23,9 @@ const SectionThree = () => {
             From Humble Beginnings to Leading LMS Provider
           </header>
           <p className="text-[#B1B4B7] px-2">
-            we're committed to your success. Our plat is designed to empower you
-            with the tools and insights you need to excel in your learning
+            we&apos;re committed to your success. Our plat is designed to
+            empower you with the tools and insights you need to excel in your
+            learning
           </p>
         </article>
         <section className="bg-[#70717780] self-start flex justify-center px-6 relative">

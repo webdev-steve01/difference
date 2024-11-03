@@ -1,6 +1,6 @@
 import Image from "next/image";
 import logo from "@/public/machine-learning-2-logo.svg";
-import caret from "@/public/caret.svg";
+// import caret from "@/public/caret.svg";
 
 const Nav = () => {
   return (
