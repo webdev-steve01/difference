@@ -1,5 +1,3 @@
-import Image from "next/image";
-import Nav from "./Nav";
 import SectionTwo from "./SectionTwo";
 import SectionThree from "./SectionThree";
 import SectionFour from "./SectionFour";

@@ -31,7 +31,7 @@ const Features = () => {
             image={diamond}
             background="bg-[#7D58B6] max-w-[40px] p-2 flex justify-center self-start max-h-[50px]"
             titleColor="text-[#743FCA]"
-            borderColor="border-l-[#662BC2] "
+            borderColor="border-l-[#662BC2]  "
           />
           <FeatureChild
             text={textTwo}
