@@ -1,7 +1,5 @@
 import FaqChild from "./components/FaqChild";
 import TransparentButton from "./components/TransparentButton";
-import Image from "next/image";
-import minus from "@/public/minus.svg";
 const FAQ = () => {
   const title2 = "How do i track my progress using the LMS dashboard?";
   const title3 = "How do i access my LMS dashboard?";
