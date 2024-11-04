@@ -1,3 +1,4 @@
+"use client";
 import TransparentButton from "./components/TransparentButton";
 import ellipse from "@/public/ellipse.svg";
 import Image from "next/image";
@@ -5,7 +6,17 @@ import pinkLeft from "@/public/pink-left.svg";
 import check from "@/public/white-tick.svg";
 import BlackCheck from "@/public/tick.svg";
 import FAQ from "./FAQ";
-const SectionFive = () => {
+import { useState } from "react";
+// import PriceSwitch from "./components/PriceSwitch";
+export const SectionFive = () => {
+  const [toggle, setToggle] = useState(false);
+  const handleToggle = () => {
+    if (toggle) {
+      setToggle(false);
+    } else {
+      setToggle(true);
+    }
+  };
   return (
     <section className="py-10 px-6">
       <div className="max-w-[120px]">
@@ -21,14 +32,20 @@ const SectionFive = () => {
           </p>
           <section className="flex items-center gap-2">
             <p>Annually</p>
-            <section className=" bg-[#6D4EA5] w-[40px] after:contents after:border after:w-4 after:h-2 h-[20px] rounded-full flex items-center justify-end">
+            <section
+              onClick={handleToggle}
+              className={
+                toggle
+                  ? `bg-[#6D4EA5] w-[40px] after:contents after:border after:w-4 after:h-2 h-[20px] rounded-full flex items-center justify-start`
+                  : `bg-[#6D4EA5] w-[40px] after:contents after:border after:w-4 after:h-2 h-[20px] rounded-full flex items-center justify-end`
+              }
+            >
               <Image src={ellipse} alt="" width={20} height={20} />
             </section>
             <p>Monthly</p>
           </section>
         </article>
       </section>
-
       <section className="flex gap-4 py-10 ">
         <section className="border max-w-[] px-6 text-white bg-gradient-to-t from-[#7D58B7] from-[5%] to-[#201E50] flex flex-col gap-2 py-10 shadow-xl shadow-[#5C13CE26] hover:shadow-2xl hover:shadow-[#5C13CE26] hover:scale-105 transition-all duration-[300ms] ease-in-out ">
           <h1 className="text-[2em]">Basic Plan</h1>
@@ -36,7 +53,7 @@ const SectionFive = () => {
             Ideal for small startups
           </p>
           <section>
-            $0/<span> month</span>
+            $0/<span> {toggle ? "year" : "month"}</span>
           </section>
           <section className="flex gap-4 items-center bg-white rounded-lg px-6 py-1">
             <p className="text-[1.2em] text-[#7D58B7]">Try for free</p>
@@ -67,7 +84,7 @@ const SectionFive = () => {
             Ideal for Growing businesses
           </p>
           <section>
-            $0/<span> month</span>
+            $0/<span> {toggle ? "year" : "month"}</span>
           </section>
           <section className="flex gap-4 items-center border-[#f1f1f1] border bg-white rounded-lg px-6 py-1">
             <p className="text-[1.2em] text-[#7D58B7]">Get Started</p>
@@ -98,7 +115,7 @@ const SectionFive = () => {
             Ideal for Large enterprise
           </p>
           <section>
-            $0/<span> month</span>
+            $0/<span> {toggle ? "year" : "month"}</span>
           </section>
           <section className="flex gap-4 items-center bg-white border-[#f1f1f1] border rounded-lg px-6 py-1">
             <p className="text-[1.2em] text-[#7D58B7]">Get Started</p>
@@ -129,7 +146,7 @@ const SectionFive = () => {
             Ideal for Educational Instutions
           </p>
           <section>
-            $0/<span> month</span>
+            $0/<span> {toggle ? "year" : "month"}</span>
           </section>
           <section className="flex gap-4 items-center bg-white border border-[#f1f1f1] rounded-lg px-6 py-1">
             <p className="text-[1.2em] text-[#7D58B7]">Get Started</p>
@@ -160,4 +177,4 @@ const SectionFive = () => {
   );
 };
 
-export default SectionFive;
+//  SectionFive;

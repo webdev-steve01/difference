@@ -12,6 +12,8 @@ const FAQ = () => {
   const title7 = "Can i customize my LMS dashboard?";
   const title8 =
     "What should i do if i encounter issues with the LMS dashboard or need assistance?";
+  const text =
+    "LMS dashboard is a centralized interface that provides users with a visual overview of their learning and training activities. It’s important because it offers quick access to important information, track progress, and enhances the overall learning experience.";
   return (
     <section>
       <section className="py-[3em] flex justify-between items-start">
@@ -29,7 +31,7 @@ const FAQ = () => {
             personalized assistance.
           </p>
           <section className="flex gap-4">
-            <p className="border px-2 py-[2px] rounded border-[#00000040] ">
+            <p className="border px-2 py-[2px] rounded border-[#00000040] cursor-pointer">
               See more FAQs
             </p>
             <button
@@ -44,29 +46,19 @@ const FAQ = () => {
 
       <section className="flex justify-between  py-10">
         <section className="flex flex-col gap-2">
-          <section className="bg-[#E5DBF64D]">
-            <section className=" min-h-[50px] px-2  font-semibold flex justify-between items-center gap-[7.5em]">
-              <p className="max-w-[400px] ">
-                What is an LMS dashboard, and why is it important?
-              </p>
-              <Image src={minus} alt="" width={20} height={20} />
-            </section>
-            <section className="max-w-[400px] text-[0.8em] px-2">
-              LMS dashboard is a centralized interface that provides users with
-              a visual overview of their learning and training activities. It’s
-              important because it offers quick access to important information,
-              track progress, and enhances the overall learning experience.
-            </section>
-          </section>
-          <FaqChild title={title2} />
-          <FaqChild title={title3} />
-          <FaqChild title={title4} />
+          <FaqChild
+            title="What is an LMS dashboard, and why is it important?"
+            text={text}
+          />
+          <FaqChild title={title2} text={text} />
+          <FaqChild title={title3} text={text} />
+          <FaqChild title={title4} text={text} />
         </section>
         <section className="flex flex-col gap-2">
-          <FaqChild title={title5} />
-          <FaqChild title={title6} />
-          <FaqChild title={title7} />
-          <FaqChild title={title8} />
+          <FaqChild title={title5} text={text} />
+          <FaqChild title={title6} text={text} />
+          <FaqChild title={title7} text={text} />
+          <FaqChild title={title8} text={text} />
         </section>
       </section>
     </section>
